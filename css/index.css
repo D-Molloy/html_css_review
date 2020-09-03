@@ -1,0 +1,57 @@
+/* put a border around everything(*)...good for setting up initial layout */
+/* *{  border:1px solid black;} */
+
+
+body{
+  background: grey;
+  margin: 0;
+  padding:0;
+  color: grey;
+  text-align:center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+main{
+  width: 80%;
+  margin:auto;
+}
+
+.background_color{
+  background-color: whitesmoke;
+}
+
+.standard_margin{
+  /* put a 20px margin on the top and bottom, 0 pixels left and right */
+  margin: 20px 0;
+}
+
+/* style the p tags that are direct children of elements with a class of .background color*/
+.background_color > p {
+  padding: 30px 0;
+  margin: 0;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+section, aside{
+  width: 49%
+}
+
+article{
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* need to include the 'p' before '.article_text' so that it overwrites the padding set in the ".background_color > p" rule on line 25*/
+/* this rule is now more SPECIFIC, ensuring that it will be used */
+p.article_text{
+  color: grey;
+  padding: 10px 0;
+  margin: 5px 0;
+}
